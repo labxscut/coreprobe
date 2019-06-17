@@ -7,7 +7,7 @@ RUN git config --global http.postBuffer 1048576000
 
 ### install coreprobe ###
 RUN cd $HOME/setup && git lfs clone --verbose https://bitbucket.org/charade/coreprobe.git
-RUN cd $HOME/setup/coreprobe/src && sh install.sh --force
+RUN cd $HOME/setup/coreprobe/src && sh install.sh --force && cp CoreProbe /usr/bin
 
 ### run test scripts ###
 RUN cd $HOME/setup/coreprobe/test && sh test.sh

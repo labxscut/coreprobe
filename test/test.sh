@@ -19,6 +19,6 @@ echo "The third step is to process the sam file"
 python $HOME/setup/coreprobe/bam_process.py ERR480581.sam ERR480581-processed
 
 echo "The fourth step is to use CoreProbe to find the result of the comparison."
-$HOME/setup/coreprobe/src/CoreProbe ERR480581-processed ERR480581-result
+CoreProbe ERR480581-processed ERR480581-result
 
 echo "finished"
