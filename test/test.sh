@@ -16,9 +16,9 @@ echo "The second step is to generate the aligned sam file."
 bwa mem -P -a -S genomes.fna ERR480581.fasta > ERR480581.sam
 
 echo "The third step is to process the sam file"
-python $HOME/setup/grammy/bam_process.py ERR480581.sam ERR480581-processed
+python $HOME/setup/coreprobe/bam_process.py ERR480581.sam ERR480581-processed
 
 echo "The fourth step is to use CoreProbe to find the result of the comparison."
-$HOME/setup/grammy/src/CoreProbe ERR480581-processed ERR480581-result
+$HOME/setup/coreprobe/src/CoreProbe ERR480581-processed ERR480581-result
 
 echo "finished"
